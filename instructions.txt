@@ -1,0 +1,22 @@
+FolderSearch is a program that has the following functions:
+
+1. to_string: Used as a conversion function taking a wstring and converting it to string.
+2. getFileExt: Used as a way of getting a file's extension, later learned about the .extension() function
+so it is no longer used.
+3. ExtCompare: Comparing the extension of a given file path with a list of acceptable extensions.
+4. StringCompare: Comparing a line with a search phrase.
+5. SearchFile: the main function of the program, it does the Folder Search.
+
+Flow: 
+>Getting the parameters, calling SearchFile Function using those parameters. 
+>Checking if the path exists and is a directory.
+>Using the filesystem recursive_directory_iterator to check all the folders and subfolders(if it was not
+ allowed, I would have called SearchFile function when I found a new directory with the updated path as
+ the only changing parameter)
+>Checking file extension using ExtCompare , opening output file and checking if the file containts the
+ search phrase using StringCompare function, line by line.
+
+Problems encountered:
+1. The task itself was something new for me, I had to learn in such a short amount of time to do all of this(Win API).
+2. Wstring to string conversion, spent some time trying to understand what had to be done.
+3. First time trying to implement multithreading, did not succeed.
